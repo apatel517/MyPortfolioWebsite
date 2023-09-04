@@ -258,7 +258,7 @@ header{
         text-align: right;
         position: relative;
         left: -1.5em;
-        width: calc(100% + 14rem);
+        width: calc(100% + 20rem);
   }
 }
 .my-services{
@@ -342,26 +342,43 @@ header{
 
 }
  
-.my-project{
+ /* .my-project{
 
     background-color: var(--clr-dark);
     text-align: center;
     color:var(--clr-accent);
+    padding:  2em 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(300px,1fr));
+    gap: 20px;
+    justify-content: center;
+
     
 
 }
-
-.project-1,.project-2,.project-3,.project-4{
-    color:var(--clr-orange);
+.project{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 300px;
+    margin: 1em;
+    text-align: center;
+    
+}
+.project-title{
+    color: var(--clr-orange);
     font-weight: var(--fw-bold);
-   
-    
+    margin: 0.5em 0;
 }
-.projectdesc-1,.projectdesc-2,.projectdesc-3,.projectdesc-4{
+
+.project-description{
     color: var(--clr-light);
-    margin: 2em;
-    position: var(--fw-reg);
+    margin: 0.5em 0;
+    font-weight: var(--fw-reg);
 }
+
+
+
 
 .portfolio{
     display: grid;
@@ -376,19 +393,49 @@ header{
     overflow: hidden;
 }
 .portfolio__img{
-    transition: transform 750ms cubic-bezier(.5,0,.5,1),
-    opacity 250ms linear;
+   
+    max-width: 100%;
+   
+    margin-right: 1em 0;
+    
 
+}*/
+.my-project {
+    background-color: var(--clr-dark);
+    text-align: center;
+    color: var(--clr-accent);
+    padding: 2em 0;
 }
-.portfolio__img:hover,
-.portfolio--item:focus .portfolio__img{
-    transform: scale(1.2);
-    opacity: .75;
+
+.portfolio {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; 
 }
-.portfolio--item:focus{
-    position: relative;
-    z-index: 2;
+
+.project {
+    flex-basis: calc(50% - 1em); 
+    margin-bottom: 1em; 
 }
+
+.project-title {
+    color: #1cfa53;
+    font-weight: var(--fw-bold);
+    margin: 0.5em 0;
+}
+
+.project-description {
+    color: var(--clr-light);
+    margin: 2em 2em;
+    font-weight: var(--fw-reg);
+}
+
+.portfolio__img {
+    flex-basis: calc(50% - 1em); 
+    max-width: 700px;
+}
+
+
 .fab.fa-github {
      
     color:#040505;   
